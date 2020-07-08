@@ -1,0 +1,2 @@
+mkdir node_modules/@types/reallydangerous
+echo "declare module 'reallydangerous';" > node_modules/@types/reallydangerous/index.d.ts

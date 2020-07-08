@@ -1,0 +1,16 @@
+build/
+build/Release
+dist/
+compile/
+
+node_modules/
+
+tsconfig.tsbuildinfo
+
+.npm
+
+# dotenv environment variables file
+.env
+.env.development
+.env.production
+.env.test

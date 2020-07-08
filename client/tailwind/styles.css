@@ -1,0 +1,460 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+
+.app {
+  background-image: url('https://d296x3mmma60gj.cloudfront.net/eyJidWNrZXQiOiJwbGF5bWF5dGUtaW1hZ2VzIiwia2V5IjoicmVzb3VyY2VzL0JhY2tncm91bmQucG5nIn0=');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Assistant font family*/
+.assistant-font {
+  font-family: 'Assistant', sans-serif;
+}
+
+.stroke {
+  color: white;
+  text-shadow: -1px -1px 0 darkslategray, 1px -1px 0 darkslategray,
+    -1px 1px 0 darkslategray, 1px 1px 0 darkslategray;
+}
+
+/* Sidebar styles */
+.sidebar-brand-item {
+  padding: 0.25rem;
+  outline: none;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar-brand-item:hover {
+  text-decoration: none;
+}
+
+.sidebar-item-content {
+  margin-left: 2.5em;
+  font-weight: 500;
+}
+
+.sidebar-item {
+  list-style-type: none;
+  border-bottom: 0.0375em solid rgba(0, 0, 0, 0.15);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-clip: border-box;
+  cursor: pointer;
+}
+
+.sidebar-list {
+  padding-left: 0 !important;
+  outline: none;
+  display: grid !important;
+  grid-template-rows: auto auto auto;
+}
+
+.sidebar-list:focus {
+  padding-top: 2.5rem;
+  padding-left: 0 !important;
+  outline: none;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+  outline: none;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: 30rem;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 0 0 0 !important;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  padding: 0 !important;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.bm-item:hover {
+  text-decoration: none !important;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  position: relative;
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  @keyframes openLogin {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 83.3333333%;
+    }
+  }
+
+  @keyframes openRegister {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 83.3333333%;
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    left: 0%;
+    transition: left 1s;
+  }
+
+  .sidebarClose {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background: white;
+    left: -80%;
+    transition: left 1s;
+  }
+
+  .chatWindow {
+    height: 36rem;
+  }
+
+  .accountWindow {
+    height: 36rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  @keyframes openLogin {
+    0% {
+      width: 12.3333333%;
+    }
+    100% {
+      width: 25%;
+    }
+  }
+
+  @keyframes openRegister {
+    0% {
+      width: 12.3333333%;
+    }
+    100% {
+      width: 25%;
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background: white;
+    left: 0%;
+    transition: left 1s;
+  }
+
+  .sidebarClose {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background: white;
+    left: -20%;
+    transition: left 1s;
+  }
+
+  .chatWindow {
+    height: 46.5rem;
+  }
+
+  .accountWindow {
+    height: 40rem;
+  }
+}
+
+.open-login-animation {
+  animation-name: openLogin;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.open-register-animation {
+  animation-name: openRegister;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.modal-animation {
+  animation-name: modal;
+  animation-delay: 0s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.login-btn {
+  background-color: #515ada;
+}
+
+.login-btn:hover {
+  background-color: #383f97;
+}
+
+.link-hover {
+  color: #515ada;
+}
+
+.link-hover:hover {
+  color: #383f97;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(
+    circle,
+    rgba(143, 143, 143, 1) 0%,
+    rgba(50, 50, 49, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(80, 79, 79);
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  color: gray;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type='file'] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

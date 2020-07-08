@@ -1,0 +1,7 @@
+{
+  "presets": [
+    ["@babel/env", { "modules": false }],
+    ["@babel/preset-react", { "modules": false }]
+  ],
+  "plugins": ["@hot-loader/react-dom"]
+}
