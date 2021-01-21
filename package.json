@@ -46,7 +46,7 @@
     "nodemailer-ses-transport": "^1.5.1",
     "reallydangerous": "^2.1.0",
     "redis": "^3.0.2",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "uuid": "^7.0.1"
   },
   "devDependencies": {
