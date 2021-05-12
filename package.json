@@ -42,7 +42,7 @@
     "mongoose": "^5.7.1",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.0",
-    "nodemailer": "^6.4.8",
+    "nodemailer": "^6.4.16",
     "nodemailer-ses-transport": "^1.5.1",
     "reallydangerous": "^2.1.0",
     "redis": "^3.0.2",
