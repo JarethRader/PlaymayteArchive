@@ -38,7 +38,7 @@
     "googleapis": "^52.1.0",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.26.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.7.1",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.0",
